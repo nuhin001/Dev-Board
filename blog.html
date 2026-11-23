@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Html</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <header class=" w-11/12 mx-auto bg-slate-100 rounded-2xl px-6 py-6 mt-6 flex justify-between items-center text-center">
+        <nav class="flex items-center gap-2">
+            <img class="object-contain" src="assets/logo.png" alt="" />
+            <h2 class="font-bold text-black text-4xl">DevBoard</h2>
+        </nav>
+
+        <div class="">
+            <button id="go-to-home" class="btn btn-primary">Go Back</button>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById("go-to-home").addEventListener("click",()=>{
+            window.location.href = "index.html"
+        })
+    </script>
+</body>
+
+</html>
