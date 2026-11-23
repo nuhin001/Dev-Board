@@ -45,7 +45,7 @@ let totalTask = activeTask();
 const task  = document.getElementById("task");
 
 if(totalTask !== false  && task){
-    task.textContent = totalTask > 9 ? total : "0" + totalTask;
+    task.textContent = totalTask > 9 ? totalTask : "0" + totalTask;
 }
 
 // active the button class
@@ -73,23 +73,36 @@ btn.forEach(btnItem => {
         element.textContent = parseInt(element.textContent)+1;
 
         const parent = document.getElementById("Activity");
-        const p = document.createElement("p")
+        const p = document.createElement("p");
 
-        p.className = " bg-white rounded-md  ";
-        p.textContent = `You have completed the task ${btnItem.parentElement.parentElement.children[1].textContent}
+        
+        p.innerHTML += `<p class = "bg-[#FFFFFF] rounded-lg  p-1"> You have completed the task ${btnItem.parentElement.parentElement.children[1].textContent}
         at ${new Date().toLocaleTimeString("es-US",{
-            hour : "2-digit",
-            mintue :" 2-digit",
-            secend : "2-digit",
+            hour :"2-digit",
+            minute :"2-digit",
+            second :"2-digit",
             hour12 :true
 
         })}
-        }`;
+        </p>`;
 
         parent.appendChild(p);
 
     })
 });
+
+// clear button
+document.getElementById("clear-btn").addEventListener("click",()=>{
+
+    let parent = document.getElementById("Activity");
+    parent.innerHTML ='';
+
+
+});
+
+function get() {
+    
+}
 
 
 
