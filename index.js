@@ -68,8 +68,9 @@ btn.forEach((btnItem) => {
     const p = document.createElement("p");
 
     // Find the card and task title
-    const card = btnItem.closest(".card");
-    const title = card.children[1].textContent;
+    // const card = btnItem.closest(".card");
+    // const title = card.children[1].textContent;
+    // console.log(card);
 
     p.innerHTML += `<p class = "bg-[#FFFFFF] rounded-lg  p-1"> You have completed the task ${btnItem.parentElement.parentElement.children[1].textContent}
         at ${new Date().toLocaleTimeString("es-US", {
@@ -90,4 +91,22 @@ document.getElementById("clear-btn").addEventListener("click", () => {
   parent.innerHTML = "";
 });
 
-function get() {}
+// color function
+function getRandomColor(){
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for(let i = 0; i < 6; i++){
+        color += letters[Math.floor(Math.random()*16)];
+    }
+    return color;
+}
+
+// color button
+document.getElementById("theme").addEventListener("click",()=>{
+    document.body.style.backgroundColor = getRandomColor();
+});
+
+
+
+
+
