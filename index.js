@@ -107,6 +107,10 @@ document.getElementById("theme").addEventListener("click",()=>{
 });
 
 
+// go-to-blog button 
 
+document.getElementById("go-to-blog").addEventListener("click",()=>{
+  window.location.href = "blog.html"
+})
 
 
