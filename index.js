@@ -114,3 +114,16 @@ document.getElementById("go-to-blog").addEventListener("click",()=>{
 })
 
 
+//  date button 
+
+let options = {weekday : "short" , year : "numeric", month : "short", day : "2-digit"};
+let date = new Date().toLocaleDateString('en-US',options);
+let arr = date.split(',')
+
+// here # for id 
+let createDate = document.querySelector("#date");
+
+//( here  for creating  element you need querySelector so I applying in this part )
+createDate.querySelector("#full-date").textContent =  `${arr[1].trim()}${arr[2].trim()}`;
+createDate.querySelector("#weekly").previousElementSibling.textContent = arr[0];
+
